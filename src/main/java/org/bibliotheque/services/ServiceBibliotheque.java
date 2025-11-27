@@ -46,6 +46,7 @@ public class ServiceBibliotheque {
             throw new IllegalArgumentException("Type inconnu : " + type);
         }
         depot.ajouter(d);
+        GestionFichierJson.sauvegarder(depot.trouverTous());
         return d;
     }
 
@@ -59,22 +60,27 @@ public class ServiceBibliotheque {
 
     //remplacer le document complet (ici je peux reconstruire un Document ou modifier champs)
     public boolean mettreAJour(Document d) {
+        GestionFichierJson.sauvegarder(depot.trouverTous());
+        GestionFichierJson.sauvegarder(depot.trouverTous());
         return depot.remplacer(d);
     }
 
     public boolean supprimer(int id) {
+        GestionFichierJson.sauvegarder(depot.trouverTous());
         return depot.supprimerParId(id);
     }
 
     public boolean emprunter(int id) {
         Document d = trouverParId(id);
         if (d == null) return false;
+        GestionFichierJson.sauvegarder(depot.trouverTous());
         return d.emprunter();
     }
 
     public boolean retourner(int id) {
         Document d = trouverParId(id);
         if (d == null) return false;
+        GestionFichierJson.sauvegarder(depot.trouverTous());
         d.retourner();
         return true;
     }

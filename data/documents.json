@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "nombrePages": 145,
+    "id": 1,
+    "titre": "Vivre en christ",
+    "auteur": "Athoms",
+    "anneePublication": 2024,
+    "nombreExemplaires": 1500,
+    "type": "LIVRE"
+  },
+  {
+    "nombrePages": 125,
+    "id": 1,
+    "titre": "Adorer",
+    "auteur": "Alfred",
+    "anneePublication": 2025,
+    "nombreExemplaires": 1500,
+    "type": "LIVRE"
+  }
+]
